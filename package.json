@@ -1,0 +1,41 @@
+{
+  "name": "bend-flashclaim-demo",
+  "version": "1.0.0",
+  "description": "Flash claim demo contract",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BendDAO/bend-flashclaim-demo.git"
+  },
+  "keywords": [
+    "Bend",
+    "Flashclaim"
+  ],
+  "author": "Developer Bend",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BendDAO/bend-flashclaim-demo/issues"
+  },
+  "homepage": "https://github.com/BendDAO/bend-flashclaim-demo#readme",
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.5",
+    "@nomiclabs/hardhat-waffle": "^2.0.3",
+    "@openzeppelin/contracts": "^4.3.3",
+    "chai": "^4.3.6",
+    "ethereum-waffle": "^3.4.4",
+    "ethers": "^5.6.2",
+    "hardhat": "^2.9.2",
+    "husky": "^7.0.4",
+    "prettier": "^2.6.1",
+    "prettier-plugin-solidity": "^1.0.0-beta.19",
+    "pretty-quick": "^3.1.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged --pattern 'contracts/**/*.sol' --pattern 'helpers/**/*.ts'  --pattern 'test/**/*.ts' --pattern 'tasks/**/*.ts'"
+    }
+  }
+}
