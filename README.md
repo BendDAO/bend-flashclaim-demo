@@ -52,9 +52,21 @@ npx hardhat --network mainnet run ./scripts/deploy.js
 
 ### Calling BoundNFT flashloan methods
 
-```
+You can find the boundBAYC, boundMAYC contract address [here](https://docs.benddao.xyz/developers/deployed-contracts/lending-protocol#boundnft-contracts).
 
-```
+Search contract address on the Etherscan website and go to Write as Proxy tab page.
+
+boundBAYC: https://etherscan.io/address/0xDBfD76AF2157Dc15eE4e57F3f942bB45Ba84aF24#writeProxyContract
+
+boundMAYC: https://etherscan.io/address/0x69f37e419bD1457d2a25ed3f5d418169caAe8D1F#writeProxyContract
+
+Find the flashLoan method and fill the correct parameters.
+
+*receiverAddress*: your deployed receiver contract addres in previous step.
+
+*nftTokenIds*: Your owned BAYC or MAYC token id list.
+
+*params*: Fill it with just 0x, because this demo contract does not need any extra encode params.
 
 ## About BoundNFT
 BoundNFTs are promissory-note tokens that are minted and burned upon borrow and repay, representing the NFT used as collateral which owed by the token holder, with same token ID.
